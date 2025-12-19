@@ -6,12 +6,32 @@ Better APIs for Frappe!
 
 The goal is to build a better API framework for Frappe.
 
+## Version Compatibility
+
+FrappeAPI automatically detects your Frappe version and applies the appropriate compatibility layer:
+
+| Frappe Version | FrappeAPI Support | Status |
+|---------------|-------------------|--------|
+| v14.x | ✅ Fully Supported | Stable |
+| v15.x | ✅ Fully Supported | Stable |
+| v16.x (develop) | ✅ Fully Supported | Beta |
+
+**Note:** FrappeAPI v0.3.0+ includes automatic version detection. If you're upgrading from an earlier version, no code changes are required.
+
+To check which Frappe version was detected:
+
+```python
+import frappeapi
+print(frappeapi.get_detected_frappe_version())  # Returns: 14, 15, or 16
+```
+
 ## Roadmap
 
 ### Frappe Versions
 
 - [x] Frappe V14 support
 - [x] Frappe V15 support
+- [x] Frappe V16 support (develop branch)
 
 ### Methods
 
