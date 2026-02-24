@@ -133,5 +133,5 @@ combine-as-imports = true
 
 [project.urls]
 Homepage = "https://github.com/0xsirsaif/frappe-api"
-Documentation = "https://github.com/0xsirsaif/frappe-api"
+Documentation = "https://0xsirsaif.github.io/frappe-api/"
 Repository = "https://github.com/0xsirsaif/frappe-api"
