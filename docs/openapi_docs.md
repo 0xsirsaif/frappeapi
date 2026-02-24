@@ -1,10 +1,10 @@
 ---
-title: OpenAPI Documentation Setup - FrappeAPI
-description: Guide to setting up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI applications within the Frappe Framework.
+title: "OpenAPI Documentation Setup — FrappeAPI"
+description: "Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples."
 ---
-# Setting Up OpenAPI Documentation in Frappe
+# Setting Up OpenAPI Documentation with FrappeAPI
 
-This guide explains how to set up automatic OpenAPI documentation using Swagger UI in your Frappe application.
+FrappeAPI automatically generates an [OpenAPI](https://www.openapis.org/) schema from your API endpoint definitions. This guide shows how to serve that schema as an interactive Swagger UI page inside your Frappe application, giving you auto-generated API documentation for every endpoint you define.
 
 ## 1. Create Portal Page Directory
 
@@ -102,3 +102,8 @@ After setting up the files:
 
 - The documentation will automatically update when you modify your API endpoints
 - The CSRF token is automatically included in API requests through the request interceptor
+
+## Next Steps
+
+- [Usage Examples](usage_examples.md) — see FrappeAPI endpoint patterns in action
+- [Roadmap](roadmap.md) — planned features for FrappeAPI

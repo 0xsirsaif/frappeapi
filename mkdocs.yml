@@ -1,7 +1,7 @@
 site_name: FrappeAPI
 site_url: https://0xsirsaif.github.io/frappe-api/
 site_author: Muhammad Saif
-site_description: A FastAPI wrapper for Frappe Framework
+site_description: "FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with Python type hints."
 repo_name: 0xsirsaif/frappe-api
 repo_url: https://github.com/0xsirsaif/frappe-api
 edit_uri: https://github.com/0xsirsaif/frappe-api/tree/main/docs
@@ -20,6 +20,7 @@ extra:
 
 theme:
   name: material
+  custom_dir: docs/overrides
   language: en
   favicon: img/favicon.png
   logo: img/icon-white.svg

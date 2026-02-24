@@ -7,6 +7,16 @@ build-backend = "flit_core.buildapi"
 name = "frappeapi"
 dynamic = ["version"]
 description = "FrappeAPI, FastAPI for Frappe Framework"
+keywords = [
+    "frappe",
+    "frappe-api",
+    "frappeapi",
+    "fastapi",
+    "frappe-framework",
+    "rest-api",
+    "api-framework",
+    "python-api",
+]
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
