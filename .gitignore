@@ -4,5 +4,6 @@
 /build
 /dist
 __pycache__
+/site
 .plans/
 .cursor/
