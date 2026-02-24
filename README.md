@@ -4,6 +4,10 @@ Better APIs for Frappe.
 
 FrappeAPI brings FastAPI-style routing and validation to the Frappe Framework. Define endpoints with type hints, get automatic validation and documentation.
 
+## Documentation
+
+[Documentation](https://0xsirsaif.github.io/frappeapi/)
+
 ## Installation
 
 ```bash
