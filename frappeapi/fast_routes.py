@@ -115,9 +115,7 @@ def _get_frappe_version() -> int:
 	try:
 		# v15+ uses frappe.api as a module (has __init__.py)
 		# v14 uses frappe.api as a single file
-		import frappe.api
-
-		if hasattr(frappe.api, "API_URL_MAP"):
+		if hasattr(frappe, "api") and hasattr(frappe.api, "API_URL_MAP"):
 			# v15+ has API_URL_MAP for Werkzeug routing
 			logger.info("Detected Frappe v15+ (has API_URL_MAP)")
 			return 15
