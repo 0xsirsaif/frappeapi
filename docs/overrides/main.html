@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{% if page %}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FrappeAPI" />
+  <meta property="og:title" content="{{ page.meta.title | default(page.title, true) }}" />
+  <meta property="og:description" content="{{ page.meta.description | default(config.site_description, true) }}" />
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@0xsaif_" />
+  <meta name="twitter:title" content="{{ page.meta.title | default(page.title, true) }}" />
+  <meta name="twitter:description" content="{{ page.meta.description | default(config.site_description, true) }}" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "FrappeAPI",
+    "alternateName": ["Frappe API", "FrappeAPI Python", "FastAPI for Frappe"],
+    "description": "{{ config.site_description }}",
+    "url": "{{ config.site_url }}",
+    "codeRepository": "{{ config.repo_url }}",
+    "programmingLanguage": "Python",
+    "runtimePlatform": "Frappe Framework",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.site_author }}"
+    },
+    "keywords": "frappe api, frappeapi, fastapi frappe, frappe framework api, frappe rest api"
+  }
+  </script>
+{% endif %}
+{% endblock %}

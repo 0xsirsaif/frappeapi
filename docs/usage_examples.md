@@ -2,7 +2,9 @@
 title: Usage Examples - FrappeAPI | FastAPI-Style Routing & More
 description: Learn how to use FrappeAPI with practical examples, including FastAPI-style path routing, query and body parameters, file uploads, response models, error handling, and more for Frappe Framework.
 ---
-# Usage Examples
+# FrappeAPI Usage Examples
+
+This page covers practical examples of building APIs with FrappeAPI in the Frappe Framework — including path routing, query parameters, request bodies, file uploads, response models, error handling, and more.
 
 > **Note**: FrappeAPI follows FastAPI's interface and semantics. For in-depth information about specific features, you can refer to [FastAPI's documentation](https://fastapi.tiangolo.com/).
 
@@ -912,3 +914,8 @@ def get_user_info(
 ```
 
 Note: Currently, header parameters as Pydantic models, duplicate headers, and forbidding extra headers are not supported.
+
+## Next Steps
+
+- [OpenAPI Documentation](openapi_docs.md) — set up Swagger UI for your FrappeAPI endpoints
+- [Roadmap](roadmap.md) — see what features are coming next
