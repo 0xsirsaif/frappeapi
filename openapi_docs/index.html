@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Guide to setting up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI applications within the Frappe Framework.">
+        <meta name="description" content="Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples.">
       
       
         <meta name="author" content="Muhammad Saif">
@@ -29,7 +29,7 @@
     
     
       
-        <title>OpenAPI Documentation Setup - FrappeAPI - FrappeAPI</title>
+        <title>OpenAPI Documentation Setup — FrappeAPI - FrappeAPI</title>
       
     
     
@@ -61,18 +61,54 @@
 
     
     
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FrappeAPI" />
+  <meta property="og:title" content="OpenAPI Documentation Setup — FrappeAPI" />
+  <meta property="og:description" content="Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples." />
+  <meta property="og:url" content="https://0xsirsaif.github.io/frappe-api/openapi_docs/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@0xsaif_" />
+  <meta name="twitter:title" content="OpenAPI Documentation Setup — FrappeAPI" />
+  <meta name="twitter:description" content="Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "FrappeAPI",
+    "alternateName": ["Frappe API", "FrappeAPI Python", "FastAPI for Frappe"],
+    "description": "FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with Python type hints.",
+    "url": "https://0xsirsaif.github.io/frappe-api/",
+    "codeRepository": "https://github.com/0xsirsaif/frappe-api",
+    "programmingLanguage": "Python",
+    "runtimePlatform": "Frappe Framework",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Saif"
+    },
+    "keywords": "frappe api, frappeapi, fastapi frappe, frappe framework api, frappe rest api"
+  }
+  </script>
+
+
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="OpenAPI Documentation Setup - FrappeAPI - FrappeAPI" />
-<meta property="og:description" content="Guide to setting up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI applications within the Frappe Framework." />
+<meta property="og:title" content="OpenAPI Documentation Setup — FrappeAPI - FrappeAPI" />
+<meta property="og:description" content="Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples." />
 <meta property="og:image" content="https://0xsirsaif.github.io/frappe-api/assets/images/social/openapi_docs.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://0xsirsaif.github.io/frappe-api/openapi_docs/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="OpenAPI Documentation Setup - FrappeAPI - FrappeAPI" />
-<meta property="twitter:description" content="Guide to setting up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI applications within the Frappe Framework." />
+<meta property="twitter:title" content="OpenAPI Documentation Setup — FrappeAPI - FrappeAPI" />
+<meta property="twitter:description" content="Set up automatic OpenAPI (Swagger UI) documentation for your FrappeAPI REST APIs in the Frappe Framework. Step-by-step guide with code examples." />
 <meta property="twitter:image" content="https://0xsirsaif.github.io/frappe-api/assets/images/social/openapi_docs.png" />
 </head>
   
@@ -93,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-openapi-documentation-in-frappe" class="md-skip">
+        <a href="#setting-up-openapi-documentation-with-frappeapi" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +164,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenAPI Documentation Setup - FrappeAPI
+              OpenAPI Documentation Setup — FrappeAPI
             
           </span>
         </div>
@@ -443,6 +479,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -498,8 +545,8 @@
   
 
 
-<h1 id="setting-up-openapi-documentation-in-frappe">Setting Up OpenAPI Documentation in Frappe<a class="headerlink" href="#setting-up-openapi-documentation-in-frappe" title="Permanent link">&para;</a></h1>
-<p>This guide explains how to set up automatic OpenAPI documentation using Swagger UI in your Frappe application.</p>
+<h1 id="setting-up-openapi-documentation-with-frappeapi">Setting Up OpenAPI Documentation with FrappeAPI<a class="headerlink" href="#setting-up-openapi-documentation-with-frappeapi" title="Permanent link">&para;</a></h1>
+<p>FrappeAPI automatically generates an <a href="https://www.openapis.org/">OpenAPI</a> schema from your API endpoint definitions. This guide shows how to serve that schema as an interactive Swagger UI page inside your Frappe application, giving you auto-generated API documentation for every endpoint you define.</p>
 <h2 id="1-create-portal-page-directory">1. Create Portal Page Directory<a class="headerlink" href="#1-create-portal-page-directory" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>templates/pages/docs/
 </code></pre></div>
@@ -584,6 +631,11 @@
 <ul>
 <li>The documentation will automatically update when you modify your API endpoints</li>
 <li>The CSRF token is automatically included in API requests through the request interceptor</li>
+</ul>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../usage_examples/">Usage Examples</a> — see FrappeAPI endpoint patterns in action</li>
+<li><a href="../roadmap/">Roadmap</a> — planned features for FrappeAPI</li>
 </ul>
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enhance your Frappe Framework applications with FrappeAPI, bringing FastAPI-like syntax, path routing, and automatic OpenAPI documentation for powerful and modern API development.">
+        <meta name="description" content="FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with type hints, Pydantic models, and path parameters.">
       
       
         <meta name="author" content="Muhammad Saif">
@@ -27,7 +27,7 @@
     
     
       
-        <title>FrappeAPI - Better, FastAPI-Style APIs for Frappe Framework - FrappeAPI</title>
+        <title>FrappeAPI — FastAPI-Style REST APIs for Frappe Framework - FrappeAPI</title>
       
     
     
@@ -59,10 +59,46 @@
 
     
     
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FrappeAPI" />
+  <meta property="og:title" content="FrappeAPI — FastAPI-Style REST APIs for Frappe Framework" />
+  <meta property="og:description" content="FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with type hints, Pydantic models, and path parameters." />
+  <meta property="og:url" content="https://0xsirsaif.github.io/frappe-api/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@0xsaif_" />
+  <meta name="twitter:title" content="FrappeAPI — FastAPI-Style REST APIs for Frappe Framework" />
+  <meta name="twitter:description" content="FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with type hints, Pydantic models, and path parameters." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "FrappeAPI",
+    "alternateName": ["Frappe API", "FrappeAPI Python", "FastAPI for Frappe"],
+    "description": "FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with Python type hints.",
+    "url": "https://0xsirsaif.github.io/frappe-api/",
+    "codeRepository": "https://github.com/0xsirsaif/frappe-api",
+    "programmingLanguage": "Python",
+    "runtimePlatform": "Frappe Framework",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Saif"
+    },
+    "keywords": "frappe api, frappeapi, fastapi frappe, frappe framework api, frappe rest api"
+  }
+  </script>
+
+
   
 <meta property="og:type" content="website" />
 <meta property="og:title" content="FrappeAPI" />
-<meta property="og:description" content="Enhance your Frappe Framework applications with FrappeAPI, bringing FastAPI-like syntax, path routing, and automatic OpenAPI documentation for powerful and modern API development." />
+<meta property="og:description" content="FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with type hints, Pydantic models, and path parameters." />
 <meta property="og:image" content="https://0xsirsaif.github.io/frappe-api/assets/images/social/index.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
@@ -70,7 +106,7 @@
 <meta property="og:url" content="https://0xsirsaif.github.io/frappe-api/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="FrappeAPI" />
-<meta property="twitter:description" content="Enhance your Frappe Framework applications with FrappeAPI, bringing FastAPI-like syntax, path routing, and automatic OpenAPI documentation for powerful and modern API development." />
+<meta property="twitter:description" content="FrappeAPI brings FastAPI-style routing, validation, and automatic OpenAPI documentation to the Frappe Framework. Build modern REST APIs for Frappe with type hints, Pydantic models, and path parameters." />
 <meta property="twitter:image" content="https://0xsirsaif.github.io/frappe-api/assets/images/social/index.png" />
 </head>
   
@@ -91,7 +127,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frappeapi" class="md-skip">
+        <a href="#frappeapi-fastapi-style-rest-apis-for-frappe-framework" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FrappeAPI - Better, FastAPI-Style APIs for Frappe Framework
+              FrappeAPI — FastAPI-Style REST APIs for Frappe Framework
             
           </span>
         </div>
@@ -333,10 +369,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why" class="md-nav__link">
+  <a href="#what-is-frappeapi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why?
+        What is FrappeAPI?
       
     </span>
   </a>
@@ -344,10 +380,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#latest-release-v020" class="md-nav__link">
+  <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Latest Release - v0.2.0 🚀
+        Key Features
       
     </span>
   </a>
@@ -355,10 +391,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frappe-version-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frappe Version Compatibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -474,21 +532,67 @@
   
 
 
-<h1 id="frappeapi">FrappeAPI<a class="headerlink" href="#frappeapi" title="Permanent link">&para;</a></h1>
-<p>Better APIs for Frappe!</p>
-<h2 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">&para;</a></h2>
-<p>The goal is to build a better API framework for Frappe.</p>
-<p>FrappeAPI follows FastAPI's interface and semantics. For in-depth information about specific features, you can refer to <a href="https://fastapi.tiangolo.com/">FastAPI's documentation</a>.</p>
-<h2 id="latest-release-v020">Latest Release - v0.2.0 🚀<a class="headerlink" href="#latest-release-v020" title="Permanent link">&para;</a></h2>
-<p>The 0.2.0 release introduces <strong>FastAPI-style path routing</strong> - now you can define API endpoints using both traditional Frappe dotted paths and modern FastAPI-style path parameters:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Accessible at /api/items/{item_id}</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">}</span>
+<h1 id="frappeapi-fastapi-style-rest-apis-for-frappe-framework">FrappeAPI: FastAPI-Style REST APIs for Frappe Framework<a class="headerlink" href="#frappeapi-fastapi-style-rest-apis-for-frappe-framework" title="Permanent link">&para;</a></h1>
+<p>FrappeAPI is a Python library that brings FastAPI-style API development to the <a href="https://frappeframework.com/">Frappe Framework</a>. It lets you define REST API endpoints with type hints, Pydantic models, and modern path routing — all within your existing Frappe applications.</p>
+<p>If you have ever wished you could write Frappe APIs the way you write FastAPI endpoints, FrappeAPI is for you.</p>
+<h2 id="what-is-frappeapi">What is FrappeAPI?<a class="headerlink" href="#what-is-frappeapi" title="Permanent link">&para;</a></h2>
+<p>FrappeAPI is a wrapper around the Frappe Framework's API layer that replaces the default whitelisted-function approach with a structured, FastAPI-inspired interface. Instead of using <code>frappe.whitelist()</code> and manually parsing arguments, you declare typed parameters and let FrappeAPI handle validation, parsing, and OpenAPI schema generation automatically.</p>
+<p>FrappeAPI follows FastAPI's interface and semantics. For in-depth information about specific features, refer to <a href="https://fastapi.tiangolo.com/">FastAPI's documentation</a>.</p>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>FastAPI-style path routing</strong> — define endpoints like <code>/items/{item_id}</code> instead of dotted paths</li>
+<li><strong>Automatic request validation</strong> — query parameters, request bodies, and path parameters are validated using Python type hints and Pydantic models</li>
+<li><strong>OpenAPI documentation</strong> — auto-generated Swagger UI for every endpoint you define</li>
+<li><strong>File uploads</strong> — handle small and large file uploads with <code>File()</code> and <code>UploadFile</code></li>
+<li><strong>Response models</strong> — filter and validate API responses using Pydantic models</li>
+<li><strong>Error handling</strong> — built-in exception handlers with support for custom handlers</li>
+<li><strong>Header parameters</strong> — read and validate HTTP headers declaratively</li>
+</ul>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<p>Install FrappeAPI from PyPI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>frappeapi
 </code></pre></div>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>frappeapi
+<p>Define your first API endpoint:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">frappeapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrappeAPI</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FrappeAPI</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">):</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">}</span>
 </code></pre></div>
+<p>Or use FastAPI-style path parameters:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FrappeAPI</span><span class="p">(</span><span class="n">fastapi_path_format</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">}</span>
+</code></pre></div>
+<h2 id="frappe-version-compatibility">Frappe Version Compatibility<a class="headerlink" href="#frappe-version-compatibility" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>FrappeAPI</th>
+<th>Frappe Framework</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.1.x</td>
+<td>v14</td>
+</tr>
+<tr>
+<td>v0.2.x</td>
+<td>v14</td>
+</tr>
+</tbody>
+</table>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="usage_examples/">Usage Examples</a> — query parameters, request bodies, file uploads, response models, and more</li>
+<li><a href="openapi_docs/">OpenAPI Documentation</a> — set up Swagger UI for your Frappe APIs</li>
+<li><a href="roadmap/">Roadmap</a> — planned features and Frappe version support</li>
+</ul>
 
 
 
