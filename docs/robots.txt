@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://0xsirsaif.github.io/frappe-api/sitemap.xml

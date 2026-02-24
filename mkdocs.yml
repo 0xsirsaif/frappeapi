@@ -6,6 +6,10 @@ repo_name: 0xsirsaif/frappe-api
 repo_url: https://github.com/0xsirsaif/frappe-api
 edit_uri: https://github.com/0xsirsaif/frappe-api/tree/main/docs
 
+plugins:
+  - search
+  - social:
+      enabled: !ENV [CI, false]
 
 extra:
   social:
@@ -16,11 +20,15 @@ extra:
 
 theme:
   name: material
+  language: en
+  favicon: img/favicon.png
+  logo: img/icon-white.svg
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.expand
+    - navigation.top
     - toc.integrate
     - content.code.copy
   palette:
