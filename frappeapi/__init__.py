@@ -21,7 +21,7 @@ import fastapi.openapi.utils as _utils
 _utils.lenient_issubclass = _patched_lenient
 
 # --- 2. Now FastAPI can use the patched version ---
-__version__ = "0.3.1"
+__version__ = "0.3.2"
 
 from fastapi.datastructures import UploadFile  # noqa: F401
 from fastapi.params import (
